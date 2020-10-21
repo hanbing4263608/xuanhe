@@ -12,6 +12,11 @@ export default new Router({
 			path: '/home',
 			name: 'home',
 			component: resolve => (require(["@/views/home"], resolve))
-		}
+		},
+    {
+    	path: '/news',
+    	name: 'news',
+    	component: resolve => (require(["@/views/news/news"], resolve))
+    }
 	]
 })
