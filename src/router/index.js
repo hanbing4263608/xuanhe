@@ -6,12 +6,17 @@ Vue.use(Router)
 export default new Router({
 	routes: [{
 			path: "/",
-			redirect: "/home"
+			redirect: "/index"
 		},
 		{
 			path: '/home',
 			name: 'home',
 			component: resolve => (require(["@/views/home"], resolve))
-		}
+		},
+		{
+			path: '/index',
+			name: 'index',
+			component: resolve => (require(["@/views/lu/index"], resolve))
+		},
 	]
 })

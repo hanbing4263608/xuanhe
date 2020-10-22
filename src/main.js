@@ -9,7 +9,17 @@ import axios from 'axios'
 import lazyload from 'vue-lazyload'
 import store from './store/index.js'
 import 'element-ui/lib/theme-chalk/index.css';
-import { Button, Select } from 'element-ui';
+import {
+	Button,
+	Select
+} from 'element-ui';
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+// import style
+
+
+Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
+import 'swiper/swiper-bundle.css';
 Vue.use(Button)
 Vue.use(Select)
 
@@ -17,16 +27,18 @@ Vue.use(Select)
 Vue.config.productionTip = false
 
 Vue.prototype.$axios = axios
-Vue.use(lazyload,{
-	loading:'../static/style/loading.gif',
-	error:'../static/style/erroe.jpg'
+Vue.use(lazyload, {
+	loading: '../static/style/loading.gif',
+	error: '../static/style/erroe.jpg'
 })
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  store,
-  components: { App },
-  template: '<App/>'
+	el: '#app',
+	router,
+	store,
+	components: {
+		App
+	},
+	template: '<App/>'
 })
