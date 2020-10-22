@@ -17,6 +17,11 @@ export default new Router({
     	path: '/news',
     	name: 'news',
     	component: resolve => (require(["@/views/news/news"], resolve))
+    },
+    {
+      path: '/detail',
+      name: 'detail',
+      component: resolve => (require(["@/views/news/detail"], resolve))
     }
 	]
 })

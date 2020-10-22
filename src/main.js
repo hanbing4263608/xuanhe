@@ -9,11 +9,12 @@ import axios from 'axios'
 import lazyload from 'vue-lazyload'
 import store from './store/index.js'
 import 'element-ui/lib/theme-chalk/index.css';
-import { Button, Select, Tabs,TabPane} from 'element-ui';
+import { Button, Select, Tabs,TabPane, pagination} from 'element-ui';
 Vue.use(Button)
 Vue.use(Select)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(pagination)
 
 
 Vue.config.productionTip = false
