@@ -27,16 +27,16 @@
                 </div>
               </div>
               <ul class="ListItem">
-                <li v-for="(itemData,index) in (newsData.classify1.contentList)" :key="index">
+                <li v-for="(item,index) in (newsData.classify1.contentList)" :key="index">
                   <div>
-                    <img :src="itemData.img" alt="">
+                    <img :src="item.img" alt="">
                   </div>
                   <div class="ItemBottom">
-                    <h3>{{itemData.biaoti}}</h3>
-                    <p class="riqi">{{itemData.riqi}}</p>
-                    <p>{{itemData.info}}</p>
+                    <h3>{{item.biaoti}}</h3>
+                    <p class="riqi">{{item.riqi}}</p>
+                    <p>{{item.info}}</p>
                     <div class="ItemMore">
-                      <p>{{itemData.more}}</p>
+                      <p>{{item.more}}</p>
                     </div>
                   </div>
                 </li>
@@ -67,16 +67,16 @@
               </div>
             </div>
             <ul class="ListItem">
-              <li v-for="itemData,index in newsData.classify2.contentList" :key="index">
+              <li v-for="item,index in newsData.classify2.contentList" :key="index">
                 <div>
-                  <img :src="itemData.img" alt="">
+                  <img :src="item.img" alt="">
                 </div>
                 <div class="ItemBottom">
-                  <h3>{{itemData.biaoti}}</h3>
-                  <p class="riqi">{{itemData.riqi}}</p>
-                  <p>{{itemData.info}}</p>
+                  <h3>{{item.biaoti}}</h3>
+                  <p class="riqi">{{item.riqi}}</p>
+                  <p>{{item.info}}</p>
                   <div class="ItemMore">
-                    <p>{{itemData.more}}</p>
+                    <p>{{item.more}}</p>
                   </div>
                 </div>
               </li>
@@ -246,7 +246,7 @@
 
       .block {
         text-align: center;
-        background-color: rgb(242,242,242);
+        background-color: rgb(242, 242, 242);
       }
     }
   }
