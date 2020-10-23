@@ -1,7 +1,10 @@
 <template>
 	<div id="home">
-		home
-		<el-button type="warning">home</el-button>
+		<header></header>
+		<section>
+			<router-view></router-view>
+		</section>
+		<footer></footer>
 	</div>
 </template>
 
