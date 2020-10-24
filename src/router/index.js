@@ -13,6 +13,17 @@ export default new Router({
 			name: 'home',
 			component: resolve => (require(["@/views/home"], resolve))
 		},
+		{
+			path: '/contact',
+			name: 'contact',
+			component: resolve => (require(["@/views/contact/contact"], resolve))
+		},
+		{
+			path: '/about',
+			name: 'about',
+			component: resolve => (require(["@/views/contact/about"], resolve))
+		}
+		},
     {
     	path: '/news',
     	name: 'news',

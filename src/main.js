@@ -12,6 +12,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 import { Button, Select, Tabs,TabPane, pagination,Row, Col} from 'element-ui'
 Vue.use(Button)
 Vue.use(Select)
+import BaiduMap from 'vue-baidu-map'
+Vue.use(BaiduMap, {
+    ak: 'TsELfeQQhttXRCFpeA4bNzaqmz3ZXcCs'
+});
 Vue.use(Tabs)
 Vue.use(TabPane)
 Vue.use(pagination)
