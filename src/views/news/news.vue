@@ -18,14 +18,15 @@
                 <el-row>
                   <div class="classify1Top">
                     <!-- <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12"> -->
-                      <router-link to="./detail">
-                        <div class="classify1Left">
-                          <img src="../../../static/images/news/u40.jpg" alt="">
-                        </div>
-                      </router-link>
+                    <router-link to="./detail">
+                      <div class="classify1Left">
+                        <img src="../../../static/images/news/u40.jpg" alt="">
+                      </div>
+                    </router-link>
                     <!-- </el-col> -->
                     <!-- <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12"> -->
-                      <router-link to="./detail"><div class="classify1Right">
+                    <router-link to="./detail">
+                      <div class="classify1Right">
                         <p class="classify1Title">煊赫公司、泰橡集团达成战略合作伙伴关系共同改革发展</p>
                         <p class="classify1Content">原外经贸部副部长，原博鳌亚洲论坛理事、秘书长全球CEO发展大会联合主席中国与全球化智库主席龙永图席了本次峰会望可以促成泰国乳胶床品在国内市场的长远发展，
                           让更多中国消费者享受到纯正的泰国乳胶...</p>
@@ -36,24 +37,27 @@
                             <p>MORE</p>
                           </div>
                         </div>
-                      </div></router-link>
+                      </div>
+                    </router-link>
                     <!-- </el-col> -->
                   </div>
                 </el-row>
                 <ul class="ListItem">
-                  <router-link to="./detail"><li v-for="(item,index) in (newsData.classify1.contentList)" :key="index">
-                    <div>
-                      <img :src="item.img" alt="">
-                    </div>
-                    <div class="ItemBottom">
-                      <h3>{{item.biaoti}}</h3>
-                      <p class="riqi">{{item.riqi}}</p>
-                      <p>{{item.info}}</p>
-                      <div class="ItemMore">
-                        <p>{{item.more}}</p>
+                  <router-link to="./detail">
+                    <li v-for="(item,index) in (newsData.classify1.contentList)" :key="index">
+                      <div>
+                        <img :src="item.img" alt="">
                       </div>
-                    </div>
-                  </li></router-link>
+                      <div class="ItemBottom">
+                        <h3>{{item.biaoti}}</h3>
+                        <p class="riqi">{{item.riqi}}</p>
+                        <p>{{item.info}}</p>
+                        <div class="ItemMore">
+                          <p>{{item.more}}</p>
+                        </div>
+                      </div>
+                    </li>
+                  </router-link>
                 </ul>
                 <!-- 引入分页组件 -->
                 <div class="block">
@@ -70,34 +74,35 @@
                   </div>
                 </router-link>
                 <router-link to="./detail">
-                <div class="classify1Right">
-                  <p class="classify1Title">360牵手ORVIBO能在智能锁市场掀起多大波澜?</p>
-                  <p class="classify1Content">360牵手ORVIBO能在智能锁市场掀起多大波澜?","contentP":
-                    "近日，互联网巨头360推出智能门锁新品的消息在朋友圈刷屏了，但细心的网友却发现这款新品的命名与之前360之前的命名似乎有些不太一样，在360后边赫然出现了“ORVIBO”几个英文字母。熟悉智能家居行业的网友都知道...</p>
-                  <div class="classify1Bot">
-                    <div>2019-08-22</div>
-                    <div>企业</div>
-                    <div class="more">
-                      <p>MORE</p>
+                  <div class="classify1Right">
+                    <p class="classify1Title">360牵手ORVIBO能在智能锁市场掀起多大波澜?</p>
+                    <p class="classify1Content">360牵手ORVIBO能在智能锁市场掀起多大波澜?","contentP":
+                      "近日，互联网巨头360推出智能门锁新品的消息在朋友圈刷屏了，但细心的网友却发现这款新品的命名与之前360之前的命名似乎有些不太一样，在360后边赫然出现了“ORVIBO”几个英文字母。熟悉智能家居行业的网友都知道...</p>
+                    <div class="classify1Bot">
+                      <div>2019-08-22</div>
+                      <div>企业</div>
+                      <div class="more">
+                        <p>MORE</p>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </router-link>
               </div>
               <ul class="ListItem">
-                <router-link to="./detail"><li v-for="item,index in newsData.classify2.contentList" :key="index">
-                  <div>
-                    <img :src="item.img" alt="">
-                  </div>
-                  <div class="ItemBottom">
-                    <h3>{{item.biaoti}}</h3>
-                    <p class="riqi">{{item.riqi}}</p>
-                    <p>{{item.info}}</p>
-                    <div class="ItemMore">
-                      <p>{{item.more}}</p>
+                <router-link to="./detail">
+                  <li v-for="item,index in newsData.classify2.contentList" :key="index">
+                    <div>
+                      <img :src="item.img" alt="">
                     </div>
-                  </div>
-                </li>
+                    <div class="ItemBottom">
+                      <h3>{{item.biaoti}}</h3>
+                      <p class="riqi">{{item.riqi}}</p>
+                      <p>{{item.info}}</p>
+                      <div class="ItemMore">
+                        <p>{{item.more}}</p>
+                      </div>
+                    </div>
+                  </li>
                 </router-link>
               </ul>
               <!-- 引入分页组件 -->
@@ -143,8 +148,9 @@
     mounted() {
 
     },
-    components:{
-      xhheader,xhfooter
+    components: {
+      xhheader,
+      xhfooter
     }
   }
 </script>
