@@ -1,13 +1,14 @@
 <template>
   <div id="app">
-    <el-row>
+    <xhheader curIndex=3></xhheader>
+    <!-- <el-row>
       <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <div class="header-top">
           <p>新闻中心</p>
           <p>NEWS CENTER</p>
         </div>
       </el-col>
-    </el-row>
+    </el-row> -->
     <el-row>
       <div class="TabControl">
         <template>
@@ -17,12 +18,14 @@
                 <el-row>
                   <div class="classify1Top">
                     <!-- <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12"> -->
-                      <div class="classify1Left">
-                        <img src="../../../static/images/news/u40.jpg" alt="">
-                      </div>
+                      <router-link to="./detail">
+                        <div class="classify1Left">
+                          <img src="../../../static/images/news/u40.jpg" alt="">
+                        </div>
+                      </router-link>
                     <!-- </el-col> -->
                     <!-- <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12"> -->
-                      <div class="classify1Right">
+                      <router-link to="./detail"><div class="classify1Right">
                         <p class="classify1Title">煊赫公司、泰橡集团达成战略合作伙伴关系共同改革发展</p>
                         <p class="classify1Content">原外经贸部副部长，原博鳌亚洲论坛理事、秘书长全球CEO发展大会联合主席中国与全球化智库主席龙永图席了本次峰会望可以促成泰国乳胶床品在国内市场的长远发展，
                           让更多中国消费者享受到纯正的泰国乳胶...</p>
@@ -33,12 +36,12 @@
                             <p>MORE</p>
                           </div>
                         </div>
-                      </div>
+                      </div></router-link>
                     <!-- </el-col> -->
                   </div>
                 </el-row>
                 <ul class="ListItem">
-                  <li v-for="(item,index) in (newsData.classify1.contentList)" :key="index">
+                  <router-link to="./detail"><li v-for="(item,index) in (newsData.classify1.contentList)" :key="index">
                     <div>
                       <img :src="item.img" alt="">
                     </div>
@@ -50,7 +53,7 @@
                         <p>{{item.more}}</p>
                       </div>
                     </div>
-                  </li>
+                  </li></router-link>
                 </ul>
                 <!-- 引入分页组件 -->
                 <div class="block">
@@ -61,9 +64,12 @@
             </el-tab-pane>
             <el-tab-pane label="行业动态" name="second">
               <div class="classify1Top">
-                <div class="classify1Left">
-                  <img src="../../../static/images/news/u203.png" alt="">
-                </div>
+                <router-link to="./detail">
+                  <div class="classify1Left">
+                    <img src="../../../static/images/news/u203.png" alt="">
+                  </div>
+                </router-link>
+                <router-link to="./detail">
                 <div class="classify1Right">
                   <p class="classify1Title">360牵手ORVIBO能在智能锁市场掀起多大波澜?</p>
                   <p class="classify1Content">360牵手ORVIBO能在智能锁市场掀起多大波澜?","contentP":
@@ -76,9 +82,10 @@
                     </div>
                   </div>
                 </div>
+                </router-link>
               </div>
               <ul class="ListItem">
-                <li v-for="item,index in newsData.classify2.contentList" :key="index">
+                <router-link to="./detail"><li v-for="item,index in newsData.classify2.contentList" :key="index">
                   <div>
                     <img :src="item.img" alt="">
                   </div>
@@ -91,6 +98,7 @@
                     </div>
                   </div>
                 </li>
+                </router-link>
               </ul>
               <!-- 引入分页组件 -->
               <div class="block">
@@ -100,12 +108,16 @@
             </el-tab-pane>
           </el-tabs>
         </template>
+
       </div>
     </el-row>
+    <xhfooter></xhfooter>
   </div>
 </template>
 
 <script>
+  import xhheader from '@/components/xh-header.vue'
+  import xhfooter from '@/components/xh-footer.vue'
   export default {
     name: "news",
     data() {
@@ -130,6 +142,9 @@
     },
     mounted() {
 
+    },
+    components:{
+      xhheader,xhfooter
     }
   }
 </script>
@@ -142,7 +157,7 @@
       height: 132px;
       text-align: center;
       line-height: 64px;
-      background-image: url(../../../static/images/news/u10.png);
+      // background-image: url(../../../static/images/news/u10.png);
 
 
       img {

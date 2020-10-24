@@ -22,12 +22,19 @@ export default new Router({
 			path: '/about',
 			name: 'about',
 			component: resolve => (require(["@/views/contact/about"], resolve))
-		}
+
 		},
     {
     	path: '/news',
     	name: 'news',
-    	component: resolve => (require(["@/views/news/news"], resolve))
+    	component: resolve => (require(["@/views/news/news"], resolve)),
+      children: [
+        {
+          path:'detail',
+          name:'detail',
+          component:detail => (require(["@/views/news/detail"],resolve))
+        }
+      ]
     },
     {
       path: '/detail',

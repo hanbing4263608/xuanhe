@@ -1,6 +1,7 @@
 <template>
   <div class="Page">
-    <div>
+    <xhheader curIndex=3></xhheader>
+    <div class="pageTop">
       <ul class="header-top">
         <li>当前位置:</li>
         <li>首页</li>
@@ -23,17 +24,33 @@
     <p>AI+IOT相结合，定义智能家居下一个十年
 未来智能家居交互会更碎片更多元，同时需要连接的设备将更多，待处理的内容与数据将是海量的。MixPad内置距离传感器、光照度传感器和温湿度传感器，能联合传感器监控室内声、光、气信息，进行智能化调控。当人靠近屏幕30CM的时候，距离传感器会自动唤醒屏幕；光照度传感器可以根据当前环境的光照，将屏幕亮度调节到人眼最适应的亮度；温湿度传感器则可以采集到当前城市的室内外温湿度，将其调节至最佳温度。</p>
     </div>
+    <xhfooter></xhfooter>
   </div>
+
 </template>
 
 <script>
+  import xhheader from '@/components/xh-header.vue'
+  import xhfooter from '@/components/xh-footer.vue'
+  export default {
+    components:{
+      xhheader,xhfooter
+    }
+  }
+
+
+
 </script>
 
 <style lang="scss" scoped>
   .Page {
     height: 100%;
     background-color: rgb(242,242,242);
-    padding: 0.8rem 2rem 0;
+    // padding: 0.8rem 2rem 0;
+
+    .pageTop {
+      padding: 0 2rem 0;
+    }
 
     .header-top li {
       float: left;
@@ -53,7 +70,8 @@
     }
 
     .content {
-      padding: 0 1rem 0.3rem;
+      padding: 0 2rem 0.3rem;
+
       p{
         font-size: 14px;
         line-height: 0.4rem;
