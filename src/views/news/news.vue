@@ -1,22 +1,73 @@
 <template>
-  <div id="news">
-    <div class="header-top">
-      <p>新闻中心</p>
-      <p>NEWS CENTER</p>
-    </div>
-    <div class="TabControl">
-      <template>
-        <el-tabs v-model="activeName" @tab-click="handleClick">
-          <el-tab-pane label="新闻中心" name="first">
-            <div class="classify1">
+  <div id="app">
+    <el-row>
+      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+        <div class="header-top">
+          <p>新闻中心</p>
+          <p>NEWS CENTER</p>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <div class="TabControl">
+        <template>
+          <el-tabs v-model="activeName" @tab-click="handleClick">
+            <el-tab-pane label="新闻中心" name="first">
+              <div class="classify1">
+                <el-row>
+                  <div class="classify1Top">
+                    <!-- <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12"> -->
+                      <div class="classify1Left">
+                        <img src="../../../static/images/news/u40.jpg" alt="">
+                      </div>
+                    <!-- </el-col> -->
+                    <!-- <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12"> -->
+                      <div class="classify1Right">
+                        <p class="classify1Title">煊赫公司、泰橡集团达成战略合作伙伴关系共同改革发展</p>
+                        <p class="classify1Content">原外经贸部副部长，原博鳌亚洲论坛理事、秘书长全球CEO发展大会联合主席中国与全球化智库主席龙永图席了本次峰会望可以促成泰国乳胶床品在国内市场的长远发展，
+                          让更多中国消费者享受到纯正的泰国乳胶...</p>
+                        <div class="classify1Bot">
+                          <div>2019-08-22</div>
+                          <div>企业</div>
+                          <div class="more">
+                            <p>MORE</p>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- </el-col> -->
+                  </div>
+                </el-row>
+                <ul class="ListItem">
+                  <li v-for="(item,index) in (newsData.classify1.contentList)" :key="index">
+                    <div>
+                      <img :src="item.img" alt="">
+                    </div>
+                    <div class="ItemBottom">
+                      <h3>{{item.biaoti}}</h3>
+                      <p class="riqi">{{item.riqi}}</p>
+                      <p>{{item.info}}</p>
+                      <div class="ItemMore">
+                        <p>{{item.more}}</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- 引入分页组件 -->
+                <div class="block">
+                  <el-pagination layout="prev, pager, next" :total="200">
+                  </el-pagination>
+                </div>
+              </div>
+            </el-tab-pane>
+            <el-tab-pane label="行业动态" name="second">
               <div class="classify1Top">
                 <div class="classify1Left">
-                  <img src="../../../static/images/news/u40.jpg" alt="">
+                  <img src="../../../static/images/news/u203.png" alt="">
                 </div>
                 <div class="classify1Right">
-                  <p class="classify1Title">煊赫公司、泰橡集团达成战略合作伙伴关系共同改革发展</p>
-                  <p class="classify1Content">原外经贸部副部长，原博鳌亚洲论坛理事、秘书长全球CEO发展大会联合主席中国与全球化智库主席龙永图席了本次峰会望可以促成泰国乳胶床品在国内市场的长远发展，
-                    让更多中国消费者享受到纯正的泰国乳胶...</p>
+                  <p class="classify1Title">360牵手ORVIBO能在智能锁市场掀起多大波澜?</p>
+                  <p class="classify1Content">360牵手ORVIBO能在智能锁市场掀起多大波澜?","contentP":
+                    "近日，互联网巨头360推出智能门锁新品的消息在朋友圈刷屏了，但细心的网友却发现这款新品的命名与之前360之前的命名似乎有些不太一样，在360后边赫然出现了“ORVIBO”几个英文字母。熟悉智能家居行业的网友都知道...</p>
                   <div class="classify1Bot">
                     <div>2019-08-22</div>
                     <div>企业</div>
@@ -27,7 +78,7 @@
                 </div>
               </div>
               <ul class="ListItem">
-                <li v-for="(item,index) in (newsData.classify1.contentList)" :key="index">
+                <li v-for="item,index in newsData.classify2.contentList" :key="index">
                   <div>
                     <img :src="item.img" alt="">
                   </div>
@@ -46,50 +97,11 @@
                 <el-pagination layout="prev, pager, next" :total="200">
                 </el-pagination>
               </div>
-            </div>
-          </el-tab-pane>
-          <el-tab-pane label="行业动态" name="second">
-            <div class="classify1Top">
-              <div class="classify1Left">
-                <img src="../../../static/images/news/u203.png" alt="">
-              </div>
-              <div class="classify1Right">
-                <p class="classify1Title">360牵手ORVIBO能在智能锁市场掀起多大波澜?</p>
-                <p class="classify1Content">360牵手ORVIBO能在智能锁市场掀起多大波澜?","contentP":
-                  "近日，互联网巨头360推出智能门锁新品的消息在朋友圈刷屏了，但细心的网友却发现这款新品的命名与之前360之前的命名似乎有些不太一样，在360后边赫然出现了“ORVIBO”几个英文字母。熟悉智能家居行业的网友都知道...</p>
-                <div class="classify1Bot">
-                  <div>2019-08-22</div>
-                  <div>企业</div>
-                  <div class="more">
-                    <p>MORE</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <ul class="ListItem">
-              <li v-for="item,index in newsData.classify2.contentList" :key="index">
-                <div>
-                  <img :src="item.img" alt="">
-                </div>
-                <div class="ItemBottom">
-                  <h3>{{item.biaoti}}</h3>
-                  <p class="riqi">{{item.riqi}}</p>
-                  <p>{{item.info}}</p>
-                  <div class="ItemMore">
-                    <p>{{item.more}}</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <!-- 引入分页组件 -->
-            <div class="block">
-              <el-pagination layout="prev, pager, next" :total="200">
-              </el-pagination>
-            </div>
-          </el-tab-pane>
-        </el-tabs>
-      </template>
-    </div>
+            </el-tab-pane>
+          </el-tabs>
+        </template>
+      </div>
+    </el-row>
   </div>
 </template>
 
@@ -110,6 +122,7 @@
     created() {
       this.$axios.get('../../../../static/data/pressCenter.json').then((res) => {
         this.newsData = res.data
+        console.log(res.data)
       }).catch((err) => {
         console.log(err)
       })
@@ -122,7 +135,7 @@
 </script>
 
 <style lang="scss" scoped>
-  #news>>> {
+  #app>>> {
     background-color: rgb(242, 242, 242);
 
     .header-top {

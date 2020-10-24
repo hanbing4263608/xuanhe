@@ -8,14 +8,15 @@ import '../static/style/rem.js'
 import axios from 'axios'
 import lazyload from 'vue-lazyload'
 import store from './store/index.js'
-import 'element-ui/lib/theme-chalk/index.css';
-import { Button, Select, Tabs,TabPane, pagination} from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css'
+import { Button, Select, Tabs,TabPane, pagination,Row, Col} from 'element-ui'
 Vue.use(Button)
 Vue.use(Select)
 Vue.use(Tabs)
 Vue.use(TabPane)
 Vue.use(pagination)
-
+Vue.use(Row)
+Vue.use(Col)
 
 Vue.config.productionTip = false
 
