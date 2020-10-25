@@ -10,9 +10,9 @@ Vue.prototype.$axios = axios;
 import lazyload from 'vue-lazyload'
 import store from './store/index.js'
 import 'element-ui/lib/theme-chalk/index.css';
-import 'swiper/swiper-bundle.css';
-import VueAwesomeSwiper from 'vue-awesome-swiper';
-Vue.use(VueAwesomeSwiper);
+// import 'swiper/swiper-bundle.css';
+// import VueAwesomeSwiper from 'vue-awesome-swiper';
+// Vue.use(VueAwesomeSwiper);
 
 
 import {
