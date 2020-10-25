@@ -6,9 +6,14 @@ import router from './router'
 import '../static/style/common.css'
 import '../static/style/rem.js'
 import axios from 'axios'
+Vue.prototype.$axios = axios;
 import lazyload from 'vue-lazyload'
 import store from './store/index.js'
 import 'element-ui/lib/theme-chalk/index.css';
+import 'swiper/swiper-bundle.css';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+Vue.use(VueAwesomeSwiper);
+
 
 import {
 	Button,
@@ -20,7 +25,7 @@ import {
 	Header,
 	Row,
 	Col,
-	pagination,
+	Pagination,
 	TabPane,
 	Tabs,
 	Tag

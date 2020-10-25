@@ -1,0 +1,157 @@
+[
+    {
+        "label":"所有产品",
+        "imgSrc":"/static/images/product/u971.png",
+        "name":"first",
+        "productList":[
+            {
+                "img":"/static/images/product/u853.png",
+                "title":"空气净化器",
+                "disc":"智能产品",
+                "text":"空气净化器家用办公卧室负离子除甲醛雾霾二手烟pm2.5除烟尘氧吧..."
+            },
+            {
+                "img":"/static/images/product/u853.png",
+               	"title":"颈椎按摩仪",
+                "disc":"保健品",
+                "text":"肩颈按摩器颈部按摩枕办公室护颈仪 按摩 热敷 脉冲颈椎按摩仪..."
+            },
+            {
+                "img":"/static/images/product/u736.png",
+                "title":"乳胶枕头",
+                "disc":"乳胶制品",
+                "text":"paratex 泰国原装进口天然乳胶枕头 枕芯 人体工学型儿童枕头 3-12岁..."
+            },
+            {
+                "img":"/static/images/product/u879.png",
+                "title":"抖抖机",
+                "disc":"智能产品",
+                "text":"paratex 泰国原装进口天然乳胶枕头 枕芯 人体工学型儿童枕头 3-12岁..."
+            }
+        ]
+    },
+    {
+    	"name":"second",
+         "label":"乳胶制品",
+        "imgSrc":"/static/images/product/u971.png",
+        "productList":[
+            {
+                "img":"/static/images/product/u749.png",
+                "title":"天然乳胶U型枕",
+                "disc":"乳胶产品",
+                "text":"舒适透气，环形有很多透气孔，可以排出人体排出的热..."
+            },
+            {
+                "img":"/static/images/product/u762.png",
+                "title":"TAIHI泰嗨天然乳胶",
+                "disc":"乳胶产品",
+                "text":"肩颈按摩器颈部按摩枕办公室护颈仪 按摩 热敷 脉冲颈椎按摩仪..."
+            },
+            {
+                "img":"/static/images/product/u788.png",
+                "title":"天然乳胶卡通枕",
+                "disc":"乳胶制品",
+                "text":"卡通设计，外观憨态可掬，增强儿童心理陪伴感拥有多种不同动物款式供消费者挑选..."
+            },
+            {
+                "img":"/static/images/product/u775.png",
+                "title":"天然乳胶床垫",
+                "disc":"智能产品",
+                "text":"舒适透气，环形有很多透气孔，可以排出人体排出的热..."
+            }
+        ]
+    },
+    {
+    	"name":"third",
+        "label":"智能产品",
+        "imgSrc":"/static/images/product/u975.png",
+        "productList":[
+            {
+                "img":"/static/images/product/u801.png",
+                "title":"智能马桶一体机",
+                "disc":"智能产品",
+                "text":"空气净化器家用办公卧室负离子除甲醛雾霾二手烟pm2.5除烟尘氧吧..."
+            },
+            {
+                "img":"/static/images/product/u814.png",
+                "title":"TCL指纹锁智能锁",
+                "disc":"保健品",
+                "text":"指纹锁防盗门智能门锁密码锁 指纹锁家用防盗门锁K1A【免费安装+三年换新】..."
+            },
+            {
+                "img":"/static/images/product/u840.png",
+                "title":"光彩透亮LED面罩",
+                "disc":"乳胶制品",
+                "text":"光彩透亮LED面罩120个复合LED光子解决肌肤问题。使肌肤由内而外得到改善..."
+            },
+            {
+                "img":"/static/images/product/u827.png",
+                "title":"智能摄像机",
+                "disc":"智能产品",
+                "text":"智能摄像机 云台版 1080P 网络wifi家用监控高清摄像头 红外夜视 双向通话 ..."
+            }
+        ]
+    },
+    {
+    	"name":"fourth",
+         "label":"保健品",
+        "imgSrc":"/static/images/product/u979.png",
+        "productList":[
+            {
+                "img":"/static/images/product/u853.png",
+               	"title":"颈椎按摩仪",
+                "disc":"保健品",
+                "text":"肩颈按摩器颈部按摩枕办公室护颈仪 按摩 热敷 脉冲颈椎按摩仪..."
+            },
+            {
+                "img":"/static/images/product/u866.png",
+               	"title":"按摩眼罩",
+                "disc":"保健品",
+                "text":"肩颈按摩器颈部按摩枕办公室护颈仪 按摩 热敷 脉冲颈椎按摩仪..."
+            },
+            {
+                "img":"/static/images/product/u892.png",
+               	"title":"足疗机",
+                "disc":"保健品",
+                "text":"paratex 泰国原装进口天然乳胶枕头 枕芯 人体工学型儿童枕头 3-12岁..."
+            },
+            {
+                "img":"/static/images/product/u879.png",
+                "title":"抖抖机",
+                "disc":"智能产品",
+                "text":"paratex 泰国原装进口天然乳胶枕头 枕芯 人体工学型儿童枕头 3-12岁..."
+            }
+        ]
+    },
+    {
+    	"name":"five",
+        "imgSrc":"/static/images/product/u983.png",
+         "label":"无纺布纸巾",
+        "productList":[
+            {
+                "img":"/static/images/product/u906.png",
+                "title":"洁面巾",
+                "disc":"智能产品",
+                "text":"空气净化器家用办公卧室负离子除甲醛雾霾二手烟pm2.5除烟尘氧吧..."
+            },
+            {
+                "img":"/static/images/product/u918.png",
+                "title":"擦脸巾",
+                "disc":"保健品",
+                "text":"肩颈按摩器颈部按摩枕办公室护颈仪 按摩 热敷 脉冲颈椎按摩仪..."
+            },
+            {
+                "img":"/static/images/product/u944.png",
+                "title":"抹布",
+                "disc":"乳胶制品",
+                "text":"paratex 泰国原装进口天然乳胶枕头 枕芯 人体工学型儿童枕头 3-12岁..."
+            },
+            {
+                "img":"/static/images/product/u931.png",
+                "title":"一次性毛巾",
+                "disc":"智能产品",
+                "text":"paratex 泰国原装进口天然乳胶枕头 枕芯 人体工学型儿童枕头 3-12岁..."
+            }
+        ]
+    }
+]

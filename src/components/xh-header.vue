@@ -2,9 +2,7 @@
 	<header id="xhheader">
 		<el-row class="top">
 			<el-col :span="2">
-				<div class="btn" @click="listclick">
-					---
-				</div>
+				<el-button icon="el-icon-more" @click="listclick" class="btn"  type="info"></el-button>
 			</el-col>
 			<el-col class="log" :span="3">
 				<img src="../../static/images/components/u9.png" alt="">
@@ -75,23 +73,19 @@
 <style lang="scss" scoped>
 	#xhheader>>>{
 		.btn{
+			height:.6rem;
+			width:.8rem;
+			justify-content: center;
+			align-items: center;
+			padding:0;
 			display:none;
-			border:1px solid #ccc;
-			border-radius: .1rem;
-			width: .4rem;
-			height: .3rem;
-			margin-right:.4rem;
-			text-align:center;
-			line-height: .26rem;
 		}
 		.top{
 			height:1.1rem;
 			display:flex;
-			justify-content: center;
 			align-items: center;
 			padding:0 .2rem;
 			.log{
-				
 				img{
 					height:.65rem;
 					width:1.32rem;
@@ -148,6 +142,7 @@
 		@media screen and (max-width: 1125px){
 			.top{
 				height:.8rem;
+				justify-content: space-around;
 				.log{
 					img{
 						height:.3rem;
@@ -156,7 +151,7 @@
 				}
 				.nav{
 					padding:0 .34rem;
-					font-size:.18rem;
+					font-size:.14rem;
 					div{
 						height:.8rem;
 					}
