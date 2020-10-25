@@ -37,6 +37,16 @@ export default new Router({
       path: '/detail',
       name: 'detail',
       component: resolve => (require(["@/views/news/detail"], resolve))
-    }
+    },
+		// {
+		// 	path: '/list',
+		// 	name: 'list',
+		// 	component: resolve => (require(["@/views/product/list"], resolve))
+		// },
+		// {
+		// 	path: '/listwei',
+		// 	name: 'listwei',
+		// 	component: resolve => (require(["@/views/product/listwei"], resolve))
+		// }
   ]
 })

@@ -9,6 +9,7 @@ import axios from 'axios'
 import lazyload from 'vue-lazyload'
 import store from './store/index.js'
 import 'element-ui/lib/theme-chalk/index.css';
+
 import {
 	Button,
 	Select,
@@ -22,6 +23,7 @@ import {
 	pagination,
 	TabPane,
 	Tabs,
+	Tag
 } from 'element-ui';
 Vue.use(Button)
 Vue.use(Select)
@@ -34,21 +36,12 @@ Vue.use(Row)
 Vue.use(Col)
 Vue.use(Tabs)
 Vue.use(TabPane)
-Vue.use(pagination)
+Vue.use(Pagination)
+Vue.use(Tag)
 import BaiduMap from 'vue-baidu-map'
 Vue.use(BaiduMap, {
 	ak: 'TsELfeQQhttXRCFpeA4bNzaqmz3ZXcCs'
 });
-
-
-Vue.config.productionTip = false
-
-Vue.prototype.$axios = axios
-Vue.use(lazyload, {
-	loading: '../static/style/loading.gif',
-	error: '../static/style/erroe.jpg'
-})
-
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',
