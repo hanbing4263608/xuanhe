@@ -1,50 +1,55 @@
 <template>
 	<div id="xhfooter">
-		<div class="left">
-			<nav>
-				<router-link tag="div" :to="item.href" v-for="(item,index) in navlist" :class="{active:index == curIndex}" :key="'footNav'+index">
-					{{item.name}}
-				</router-link>
-			</nav>
-			<div class="address">
-				<p class="en">No.293. Kaishan Road, Chuanshan District, Suining City: Sichuan Provinc</p>
-				<p class="cn">地址:北京市大兴区金苑路32号院3号</p>
-			</div>
-			<div class="way">
-				<div class="way-left">
-					<p class="tel">Tel:0825-2287099</p>
-					<div>
-						<router-link tag="div" to="/contact" class="way-link">网站地图</router-link>
-						<div class="line">|</div>
-						<router-link tag="div" to="/contact" class="way-link">联系我们</router-link>
+		<div class="top">
+			<el-row>
+				<el-col class="left" :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+					<nav>
+						<router-link tag="div" :to="item.href" v-for="(item,index) in navlist" :class="{active:index == curIndex}" :key="'footNav'+index">
+							{{item.name}}
+						</router-link>
+					</nav>
+					<div class="address">
+						<p class="en">No.293. Kaishan Road, Chuanshan District, Suining City: Sichuan Provinc</p>
+						<p class="cn">地址:北京市大兴区金苑路32号院3号</p>
 					</div>
-				</div>
-				<div class="way-right">
-					<router-link tag="div" to="/contact" class="way-btn">
-						<img src="../../static/images/components/u604.png" alt="">
-						加入我们
-					</router-link>
-					<router-link tag="div" to="/contact" class="way-btn">
-						<img src="../../static/images/components/u608.png" alt="">
-						企业邮箱
-					</router-link>
-				</div>
-			</div>
-			<div class="copright">
-				CopyrightO2017.YONG Yi Group | All rights reserved备案号:蜀ICP备11019746号网站设计:赛门仕博
-			</div>
+					<el-row class="way">
+						<el-col class="way-left">
+							<p class="tel">Tel:0825-2287099</p>
+							<div class="name-group">
+								<router-link tag="div" to="/contact" class="way-link">网站地图</router-link>
+								<div class="line"></div>
+								<router-link tag="div" to="/contact" class="way-link">联系我们</router-link>
+							</div>
+						</el-col>
+						<el-col class="way-right">
+							<router-link tag="div" to="/contact" class="way-btn">
+								<img src="../../static/images/components/u604.png" alt="">
+								加入我们
+							</router-link>
+							<router-link tag="div" to="/contact" class="way-btn">
+								<img src="../../static/images/components/u608.png" alt="">
+								企业邮箱
+							</router-link>
+						</el-col>
+					</el-row>
+				</el-col>
+				<el-col class="right" :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+						<div class="code">
+							<img src="../../static/images/components/u615.png" alt="">
+							<p>煊赫微信公众号</p>
+						</div>
+						<a class='top' href="#">
+							<img src="../../static/images/components/u613.png" alt="">
+						</a>
+					
+				</el-col>
+			</el-row>
 		</div>
-		<div class="right">
-				<div class="code">
-					<img src="../../static/images/components/u615.png" alt="">
-					<p>煊赫微信公众号</p>
-				</div>
-				<a class='top' href="#">
-					<img src="../../static/images/components/u613.png" alt="">
-				</a>
-			
+		<div class="copright">
+			CopyrightO2017.YONG Yi Group | All rights reserved备案号:蜀ICP备11019746号网站设计:赛门仕博
 		</div>
 	</div>
+	
 </template>
 
 <script>
@@ -88,12 +93,7 @@
 <style lang="scss" scoped>
 	#xhfooter>>>{
 		background: #eee;
-		display:flex;
-		justify-content: space-between;
 		padding:.4rem 1.5rem .7rem;
-		.left,.right{
-			flex:1;
-		}
 		.left{
 			font-size: .14rem;
 			color:#aaa;
@@ -113,24 +113,38 @@
 				margin-top:.4rem 0;
 			}
 			.way{
-				display:flex;
 				margin-bottom:.4rem;
+				display:flex;
+				align-items: center;
 				.way-left{
-					div{
+					.name-group{
+						margin-left:.3rem;
+						margin-bottom:.2rem;
 						display:flex;
+						align-items: center;
 						.way-link:hover{
 							color:#000;
 							cursor:pointer;
 						}
+						div{
+							width:1.39rem;
+							height: .44rem;
+							display:flex;
+							justify-content: center;
+							align-items: center;
+						}
 						.line{
+							height:1em;
+							width: 0;
 							margin:0 .1rem;
+							border-left:1px solid #ccc;
 						}
 					}
 				}
 				.way-right{
 					display:flex;
 					align-items: flex-end;
-					margin-left:.2rem;
+					margin-left:.3rem;
 					.way-btn{
 						width:1.39rem;
 						height: .44rem;
@@ -153,11 +167,9 @@
 					
 				}
 			}
-			.copright{
-				font-size:.1rem;
-			}
 		}
 		.right{
+			height: 2.6rem;
 			display:flex;
 			justify-content: flex-end;
 			align-items: center;
@@ -181,6 +193,30 @@
 					width: .49rem;
 					height: 1.6rem;
 				}
+			}
+		}
+		.copright{
+			color:#ccc;
+			font-size:.1rem;
+			margin-top:.2rem;
+		}
+		@media screen and (max-width:1125px){
+			.left{
+				.way{
+					flex-direction: column;
+				}
+			}
+		}
+		@media screen and (max-width:940px){
+			.left{
+				.way{
+					flex-direction: column;
+					.name-group{
+					}
+				}
+			}
+			.right{
+				justify-content: center;
 			}
 		}
 	}
