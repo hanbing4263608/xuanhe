@@ -19,6 +19,9 @@ import {
 	Header,
 	Row,
 	Col,
+	pagination,
+	TabPane,
+	Tabs,
 } from 'element-ui';
 Vue.use(Button)
 Vue.use(Select)
@@ -29,6 +32,9 @@ Vue.use(MenuItemGroup)
 Vue.use(Header)
 Vue.use(Row)
 Vue.use(Col)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(pagination)
 import BaiduMap from 'vue-baidu-map'
 Vue.use(BaiduMap, {
 	ak: 'TsELfeQQhttXRCFpeA4bNzaqmz3ZXcCs'

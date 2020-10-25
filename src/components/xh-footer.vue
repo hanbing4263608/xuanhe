@@ -13,15 +13,15 @@
 						<p class="cn">地址:北京市大兴区金苑路32号院3号</p>
 					</div>
 					<el-row class="way">
-						<el-col class="way-left" :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+						<el-col class="way-left">
 							<p class="tel">Tel:0825-2287099</p>
-							<div>
+							<div class="name-group">
 								<router-link tag="div" to="/contact" class="way-link">网站地图</router-link>
-								<div class="line">|</div>
+								<div class="line"></div>
 								<router-link tag="div" to="/contact" class="way-link">联系我们</router-link>
 							</div>
 						</el-col>
-						<el-col class="way-right" :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+						<el-col class="way-right">
 							<router-link tag="div" to="/contact" class="way-btn">
 								<img src="../../static/images/components/u604.png" alt="">
 								加入我们
@@ -114,23 +114,37 @@
 			}
 			.way{
 				margin-bottom:.4rem;
+				display:flex;
+				align-items: center;
 				.way-left{
-					div{
-						margin:.2rem auto;
+					.name-group{
+						margin-left:.3rem;
+						margin-bottom:.2rem;
 						display:flex;
+						align-items: center;
 						.way-link:hover{
 							color:#000;
 							cursor:pointer;
 						}
+						div{
+							width:1.39rem;
+							height: .44rem;
+							display:flex;
+							justify-content: center;
+							align-items: center;
+						}
 						.line{
+							height:1em;
+							width: 0;
 							margin:0 .1rem;
+							border-left:1px solid #ccc;
 						}
 					}
 				}
 				.way-right{
 					display:flex;
 					align-items: flex-end;
-					margin-left:.2rem;
+					margin-left:.3rem;
 					.way-btn{
 						width:1.39rem;
 						height: .44rem;
@@ -186,7 +200,21 @@
 			font-size:.1rem;
 			margin-top:.2rem;
 		}
+		@media screen and (max-width:1125px){
+			.left{
+				.way{
+					flex-direction: column;
+				}
+			}
+		}
 		@media screen and (max-width:940px){
+			.left{
+				.way{
+					flex-direction: column;
+					.name-group{
+					}
+				}
+			}
 			.right{
 				justify-content: center;
 			}

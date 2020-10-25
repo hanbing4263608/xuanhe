@@ -1,0 +1,105 @@
+{
+  "classify1": {
+    "contentList": [
+      {
+        "id": 1,
+        "img": "/static/images/news/8888_u36.png",
+        "biaoti": "智能科技",
+        "riqi": "2019-08-22",
+        "info": "智能家居和普通家居究竞有何不同?近两年全球正在悄的燃起一场智能化的革命..",
+        "more": "MORE"
+      },
+      {
+        "id": 2,
+        "img": "/static/images/news/u52.png",
+        "biaoti": "带来环保的睡眠体验",
+        "riqi": "2019-08-22",
+        "info": "智能家居和普通家居究竞有何不同?近两年来都不回家萨半岛全球正在悄悄...",
+        "more": "MORE"
+      },
+      {
+        "id": 3,
+        "img": "/static/images/news/u70.png",
+        "biaoti": "一带一路和跨境电商",
+        "riqi": "2019-08-22",
+        "info": "原外经贸部副部长，原博鳌亚洲论坛理事、秘书长，全球CEO发展大会联合主席、中国与全球化智库主永...",
+        "more": "MORE"
+      },
+      {
+        "id": 4,
+        "img": "/static/images/news/u74.png",
+        "biaoti": "智能家居",
+        "riqi": "2019-08-22",
+        "info": "以°汇聚双创活力，澎湃发展动力”为主题的2019年全国大众创业万众创新活动周正在杭州如火如......",
+        "more": "MORE"
+      },
+      {
+        "id": 5,
+        "img": "/static/images/news/u85.png",
+        "biaoti": "战略合作",
+        "riqi": "2019-08-22",
+        "info": "2019年6月27日，煊赫家纺2020春夏新品发布会泰国乳胶上市公司泰橡集团...",
+        "more": "MORE"
+      },
+      {
+        "id": 6,
+        "img": "/static/images/news/u96.png",
+        "biaoti": "升级差异化",
+        "riqi": "2019-08-22",
+        "info": "煊赫智能家居和普通家居究竟有何不同?近两年来全球正在悄悄的燃起一场智能化的革命可...",
+        "more": "MORE"
+      }
+    ]
+  },
+  "classify2": {
+    "contentList": [{
+        "id": 1,
+        "img": "/static/images/news/u189.png",
+        "biaoti": "带来环保的睡眠体验",
+        "riqi": "2019-08-22",
+        "info": "原外经贸部副部长，原博鳌亚洲论坛理事、秘书长，全球CEO发展大会联合主席...",
+        "more": "MORE"
+      },
+      {
+        "id": 2,
+        "img": "/static/images/news/u178.png",
+        "biaoti": "煊赫家访负离子沁息科技",
+        "riqi": "2019-08-22",
+        "info": "以“汇聚双创活力，澎湃发展动力”为主题的2019全国大众创业...",
+        "more": "MORE"
+      },
+      {
+        "id": 3,
+        "img": "/static/images/news/u167.png",
+        "biaoti": "煊赫冲出同质化重围",
+        "riqi": "2019-08-22",
+        "info": "2018.6.21，水星家纺迎来了2019春夏新品发布会远远早于业界同行...",
+        "more": "MORE"
+      },
+      {
+        "id": 4,
+        "img": "/static/images/news/u134.png",
+        "biaoti": "研发中心",
+        "riqi": "2019-08-22",
+        "info": "煊赫与匠心独运的家具设计师展开合作，将最前沿的设计理念...",
+        "more": "MORE"
+      },
+      {
+        "id": 5,
+        "img": "/static/images/news/u156.png",
+        "biaoti": "煊赫新风系统",
+        "riqi": "2019-08-22",
+        "info": "随着装修污染问题被曝光的频率增加，越来越多的关注绿...",
+        "more": "MORE"
+      },
+      {
+        "id": 5,
+        "img": "/static/images/news/u145.png",
+        "biaoti": "行业按键",
+        "riqi": "2019-08-22",
+        "info": "代全宅智能家居系统革命性地融合按键、触摸、语音和Ap四大交互方式，满足家居环境复杂的多空间...",
+        "more": "MORE"
+      }
+    ]
+  }
+}

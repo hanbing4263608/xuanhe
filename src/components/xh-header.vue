@@ -40,7 +40,7 @@
 					},
 					{
 						name:"产品中心",
-						href:"/"
+						href:"/list"
 					},
 					{
 						name:"关于煊赫",
@@ -48,7 +48,7 @@
 					},
 					{
 						name:"新闻中心",
-						href:"/"
+						href:"/news"
 					},
 					{
 						name:"联系我们",
