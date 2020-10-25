@@ -1,25 +1,30 @@
 <template>
-	<div id="xhheader">
-		<div class="top">
-			<div class="log">
+	<header id="xhheader">
+		<el-row class="top">
+			<el-col :span="2">
+				<div class="btn" @click="listclick">
+					---
+				</div>
+			</el-col>
+			<el-col class="log" :span="3">
 				<img src="../../static/images/components/u9.png" alt="">
-			</div>
-			<div class="nav">
+			</el-col>
+			<el-col class="nav" :span="18" ref="navlist">
 				<router-link tag="div" :to="item.href" v-for="(item,index) in navlist" :class="{active:index == curIndex}" :key="'headNav'+index">
 					{{item.name}}
 				</router-link>
-			</div>
-			<div class="way">
+			</el-col>
+			<el-col class="way" :span="3">
 				<router-link to="/contact"><img src="../../static/images/components/u19.png" alt=""></router-link>
 				<router-link to="/contact"><img src="../../static/images/components/u20.png" alt=""></router-link>
 				<router-link to="/contact"><img src="../../static/images/components/顶部_u18.png" alt=""></router-link>
-			</div>
-		</div>
+			</el-col>
+		</el-row>
 		<div class="bottom">
 			<img src="../../static/images/components/u1079.png" alt="">
 			<p class="text">{{navlist[curIndex].name}}</p>
 		</div>
-	</div>
+	</header>
 </template>
 
 <script>
@@ -27,6 +32,7 @@
 		name:"xhheader",
 		data(){
 			return{
+				listShow:false,
 				navlist:[
 					{
 						name:"首页",
@@ -53,21 +59,39 @@
 		},
 		props:{
 			curIndex:{
-					type:Number,
+					type:[Number,String],
 					default:0
 				}
+		},
+		methods:{
+			listclick(){
+				this.listShow = !this.listShow;
+				this.$refs.navlist.$el.style.display = this.listShow ? 'flex' : 'none' ;
+			}
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
 	#xhheader>>>{
+		.btn{
+			display:none;
+			border:1px solid #ccc;
+			border-radius: .1rem;
+			width: .4rem;
+			height: .3rem;
+			margin-right:.4rem;
+			text-align:center;
+			line-height: .26rem;
+		}
 		.top{
-			display:flex;
-			justify-content: space-around;
-			align-items: center;
 			height:1.1rem;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			padding:0 .2rem;
 			.log{
+				
 				img{
 					height:.65rem;
 					width:1.32rem;
@@ -75,6 +99,7 @@
 			}
 			.nav{
 				display:flex;
+				justify-content: center;
 				font-size:.24rem;
 				div{
 					padding:0 .34rem;
@@ -92,7 +117,9 @@
 				}
 			}
 			.way{
+				min-width: 1.6rem;
 				img{
+					height: .25rem;
 					margin:0 .1rem;
 				}
 			}
@@ -116,6 +143,56 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+			}
+		}
+		@media screen and (max-width: 1125px){
+			.top{
+				height:.8rem;
+				.log{
+					img{
+						height:.3rem;
+						width:.48rem;
+					}
+				}
+				.nav{
+					padding:0 .34rem;
+					font-size:.18rem;
+					div{
+						height:.8rem;
+					}
+				}
+				.way{
+					img{
+						height: .15rem;
+						
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 1080px){
+			.top{
+				justify-content: space-between;
+				padding-right:1rem;
+				.btn{
+					display:block;
+				}
+				.nav{
+					position: absolute;
+					display:flex;
+					flex-direction: column;
+					z-index:2;
+					background: rgb(227,226,240);
+					padding:0;
+					left:.3rem;
+					top:.8rem;
+					width:2rem;
+					display:none;
+					div{
+						padding:0;
+						display:flex;
+						justify-content: center;
+					}
+				}
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 <template>
 	<div id="contact">
-		<xhheader curIndex="4"></xhheader>
+		<xhheader curIndex=4></xhheader>
 		<section>
 			<div class="title">
 				<h1>北京煊赫电子商务有限公司</h1>
@@ -8,7 +8,7 @@
 			</div>
 			<div class="way">
 				<div class="way-item">
-					<img src="" alt="">
+					<i class="el-icon-phone"></i>
 					<div>
 						<h5>联系电话</h5>
 						<p>136-5368-9893</p>
@@ -16,7 +16,7 @@
 				</div>
 				<div class="line"></div>
 				<div class="way-item">
-					<img src="" alt="">
+					<i class="el-icon-location"></i>
 					<div>
 						<h5>联系地址</h5>
 						<p>北京市大兴区金苑路32号院3号</p>
@@ -24,7 +24,7 @@
 				</div>
 				<div class="line"></div>
 				<div class="way-item">
-					<img src="" alt="">
+					<i class="el-icon-message"></i>
 					<div>
 						<h5>服务邮箱</h5>
 						<p>89893@163.com</p>
@@ -79,9 +79,8 @@
 				align-items: center;
 				.way-item{
 					width: 3.45rem;
-					img{
-						width: .8rem;
-						height: .8rem;
+					i{
+						font-size:.8rem;
 						margin:.2rem;
 					}
 					div{

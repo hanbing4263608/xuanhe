@@ -1,6 +1,6 @@
 <template>
 	<div id="about">
-		<xhheader curIndex="2"></xhheader>
+		<xhheader curIndex=2></xhheader>
 		<section>
 			<div class="title">
 				<h1>北京煊赫电子商务有限公司</h1>
