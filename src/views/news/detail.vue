@@ -45,14 +45,19 @@
   .Page {
     height: 100%;
     background-color: rgb(242, 242, 242);
-    // padding: 0.8rem 2rem 0;
 
     .pageTop {
       padding: 0 2rem 0;
     }
 
+    .header-top {
+      width: 2.2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
     .header-top li {
-      float: left;
+      // float: left;
       margin-right: 0.1rem;
     }
 
@@ -72,7 +77,7 @@
       padding: 0 2rem 0.3rem;
 
       p {
-        font-size: 14px;
+        font-size: 0.14rem;
         line-height: 0.4rem;
         margin-top: 0.5rem;
       }

@@ -27,18 +27,18 @@ export default new Router({
     {
       path: '/news',
       name: 'news',
-      component: resolve => (require(["@/views/news/news"], resolve)),
-      children: [{
-        path: 'detail',
-        name: 'detail',
-        component: detail => (require(["@/views/news/detail"], resolve))
-      }]
+      component: resolve => (require(["@/views/news/news"], resolve))
+      // children: [{
+      //   path: 'detail',
+      //   name: 'detail',
+      //   component: detail => (require(["@/views/news/detail"], resolve))
+      // }]
     },
-    // {
-    // 	path: '/detail',
-    // 	name: 'detail',
-    // 	component: resolve => (require(["@/views/news/detail"], resolve))
-    // },
+    {
+    	path: '/detail',
+    	name: 'detail',
+    	component: resolve => (require(["@/views/news/detail"], resolve))
+    },
     {
       path: '/list',
       name: 'list',
