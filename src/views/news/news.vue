@@ -223,7 +223,7 @@
         li {
           display: inline-block;
           width: 3.8rem;
-          height: 4.4rem;
+          // height: 4.4rem;
           min-width: 322px;
           margin: 0.2rem 0;
           background-color: #FFFFFF;

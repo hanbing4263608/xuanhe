@@ -15,6 +15,11 @@ export default new Router({
       component: resolve => (require(["@/views/lu/index"], resolve))
     },
     {
+      path: '/three',
+      name: 'three',
+      component: resolve => (require(["@/views/lu/three"], resolve))
+    },
+    {
       path: '/contact',
       name: 'contact',
       component: resolve => (require(["@/views/contact/contact"], resolve))
@@ -28,11 +33,6 @@ export default new Router({
       path: '/news',
       name: 'news',
       component: resolve => (require(["@/views/news/news"], resolve))
-      // children: [{
-      //   path: 'detail',
-      //   name: 'detail',
-      //   component: detail => (require(["@/views/news/detail"], resolve))
-      // }]
     },
     {
     	path: '/detail',
