@@ -1,9 +1,6 @@
 <template>
 	<header id="xhheader">
 		<el-row class="top">
-			<el-col :span="2">
-				<el-button icon="el-icon-more" @click="listclick" class="btn"  type="info"></el-button>
-			</el-col>
 			<el-col class="log" :span="3">
 				<img src="../../static/images/components/u9.png" alt="">
 			</el-col>
@@ -16,6 +13,9 @@
 				<router-link to="/contact"><img src="../../static/images/components/u19.png" alt=""></router-link>
 				<router-link to="/contact"><img src="../../static/images/components/u20.png" alt=""></router-link>
 				<router-link to="/contact"><img src="../../static/images/components/顶部_u18.png" alt=""></router-link>
+			</el-col>
+			<el-col :span="2" class="btn" >
+				<el-button icon="el-icon-more" @click="listclick"  ></el-button>
 			</el-col>
 		</el-row>
 		<div class="bottom">
@@ -71,21 +71,39 @@
 </script>
 
 <style lang="scss" scoped>
-	#xhheader>>>{
-		.btn{
-			height:.6rem;
-			width:.8rem;
-			justify-content: center;
-			align-items: center;
-			padding:0;
-			display:none;
+	@keyframes jump {
+		0%{
+			transform: translateY(0);
 		}
+		50%{
+			transform: translateY(-10px);
+		}
+		100%{
+			transform: translateY(0);
+		}
+	}
+	#xhheader>>>{
+		width: 100vw;
+		
 		.top{
-			height:1.1rem;
+			height:1rem;
 			display:flex;
+			justify-content: space-between;
 			align-items: center;
-			padding:0 .2rem;
+			.btn{
+				height:.4rem;
+				width:.6rem;
+				padding:0;
+				display:none;
+				.el-button{
+					height:100%;
+					display:flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
 			.log{
+				padding:0 .5rem;
 				img{
 					height:.65rem;
 					width:1.32rem;
@@ -97,7 +115,7 @@
 				font-size:.24rem;
 				div{
 					padding:0 .34rem;
-					height:1.1rem;
+					height:1rem;
 					display:flex;
 					align-items: center;
 					&:hover{
@@ -111,10 +129,13 @@
 				}
 			}
 			.way{
-				min-width: 1.6rem;
+				width: 1.6rem;
 				img{
 					height: .25rem;
 					margin:0 .1rem;
+					&:hover{
+						animation:jump .6s infinite;
+					}
 				}
 			}
 		}
@@ -142,7 +163,6 @@
 		@media screen and (max-width: 1125px){
 			.top{
 				height:.8rem;
-				justify-content: space-around;
 				.log{
 					img{
 						height:.3rem;
@@ -166,8 +186,6 @@
 		}
 		@media screen and (max-width: 1080px){
 			.top{
-				justify-content: space-between;
-				padding-right:1rem;
 				.btn{
 					display:block;
 				}
@@ -178,9 +196,9 @@
 					z-index:2;
 					background: rgb(227,226,240);
 					padding:0;
-					left:.3rem;
+					left:.0;
 					top:.8rem;
-					width:2rem;
+					width:100vw;
 					display:none;
 					div{
 						padding:0;
@@ -188,6 +206,9 @@
 						justify-content: center;
 					}
 				}
+			}
+			.way{
+				display:none;
 			}
 		}
 	}
