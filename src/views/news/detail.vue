@@ -4,8 +4,8 @@
     <div class="pageTop">
       <ul class="header-top">
         <li>当前位置:</li>
-        <li>首页</li>
-        <li>新闻中心</li>
+        <li>首页></li>
+        <li>新闻中心></li>
         <li>新闻详情</li><br />
       </ul>
       <ul class="hangyeRiqi">
@@ -43,11 +43,21 @@
 
 <style lang="scss" scoped>
   .Page {
-    height: 100%;
     background-color: rgb(242, 242, 242);
 
     .pageTop {
       padding: 0 2rem 0;
+	  @media screen and (max-width:768px){
+	  	padding: 0 .15rem 0;
+	  }
+    }
+	
+
+    .header-top {
+		line-height:.3rem;
+      display: flex;
+	  color:#aaa;
+	  margin-top:.2rem;
     }
 
     .header-top {
@@ -63,7 +73,10 @@
 
     .hangyeRiqi {
       margin-top: 0.2rem;
-      line-height: 0.2rem;
+	  p:nth-of-type(1){
+		  font-size:.28rem;
+		  line-height: 0.8rem;
+	  }
     }
 
     h1 {
@@ -75,7 +88,9 @@
 
     .content {
       padding: 0 2rem 0.3rem;
-
+		@media screen and (max-width:768px){
+			padding: 0 .4rem 0.3rem;
+		}
       p {
         font-size: 0.14rem;
         line-height: 0.4rem;
