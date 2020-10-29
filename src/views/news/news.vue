@@ -1,49 +1,35 @@
 <template>
 	<div id="app">
 		<xhheader curIndex=3></xhheader>
-		<!-- <el-row>
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-        <div class="header-top">
-          <p>新闻中心</p>
-          <p>NEWS CENTER</p>
-        </div>
-      </el-col>
-    </el-row> -->
 		<el-row>
 			<div class="TabControl">
 				<template>
 					<el-tabs v-model="activeName" @tab-click="handleClick">
 						<el-tab-pane label="新闻中心" name="first">
 							<div class="classify1">
-								<el-row>
-									<div class="classify1Top">
-										<!-- <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12"> -->
-										<router-link to="./detail">
-											<div class="classify1Left">
-												<img src="../../../static/images/news/u40.jpg" alt="">
-											</div>
-										</router-link>
-										<!-- </el-col> -->
-										<!-- <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12"> -->
-										<router-link to="./detail">
-											<div class="classify1Right">
-												<p class="classify1Title">煊赫公司、泰橡集团达成战略合作伙伴关系共同改革发展</p>
-												<p class="classify1Content">原外经贸部副部长，原博鳌亚洲论坛理事、秘书长全球CEO发展大会联合主席中国与全球化智库主席龙永图席了本次峰会望可以促成泰国乳胶床品在国内市场的长远发展，
-													让更多中国消费者享受到纯正的泰国乳胶...</p>
-												<div class="classify1Bot">
-													<div>2019-08-22</div>
-													<div>企业</div>
-													<div class="more">
-														<p>MORE</p>
-													</div>
+								<div class="classify1Top">
+									<router-link to="./detail" tag="div">
+										<div class="classify1Left">
+											<img src="../../../static/images/news/u40.jpg" alt="">
+										</div>
+									</router-link>
+									<router-link to="./detail" tag="div">
+										<div class="classify1Right">
+											<p class="classify1Title">煊赫公司、泰橡集团达成战略合作伙伴关系共同改革发展</p>
+											<p class="classify1Content">原外经贸部副部长，原博鳌亚洲论坛理事、秘书长全球CEO发展大会联合主席中国与全球化智库主席龙永图席了本次峰会望可以促成泰国乳胶床品在国内市场的长远发展，让更多中国消费者享受到纯正的泰国乳胶...</p>
+											<div class="classify1Bot">
+												<div>2019-08-22</div>
+												<div>企业</div>
+												<div class="more">
+													<p>MORE</p>
 												</div>
 											</div>
-										</router-link>
-										<!-- </el-col> -->
-									</div>
-								</el-row>
+										</div>
+									</router-link>
+								</div>
+								<!-- 商品列表 -->
 								<ul class="ListItem">
-									<router-link to="./detail">
+									<router-link to="./detail" tag="div">
 										<li v-for="(item,index) in list1" :key="'c1'+index">
 											<div>
 												<img :src="item.img" alt="">
@@ -59,7 +45,7 @@
 										</li>
 									</router-link>
 								</ul>
-								<!-- 引入分页组件 -->
+								<!-- 引入elementUI分页组件 -->
 								<div class="block">
 									<el-pagination layout="prev, pager, next" :total="200">
 									</el-pagination>
@@ -73,7 +59,7 @@
 										<img src="../../../static/images/news/u203.png" alt="">
 									</div>
 								</router-link>
-								<router-link to="./detail">
+								<router-link to="./detail" tag="div">
 									<div class="classify1Right">
 										<p class="classify1Title">360牵手ORVIBO能在智能锁市场掀起多大波澜?</p>
 										<p class="classify1Content">360牵手ORVIBO能在智能锁市场掀起多大波澜?","contentP":
@@ -89,7 +75,7 @@
 								</router-link>
 							</div>
 							<ul class="ListItem">
-								<router-link to="./detail">
+								<router-link to="./detail" tag="div">
 									<li v-for="item,index in list2" :key="'c2'+index">
 										<div>
 											<img :src="item.img" alt="">
@@ -129,13 +115,13 @@
 			return {
 				activeName: 'first',
 				newsData: {},
-				list1:[],
-				list2:[]
+				list1: [],
+				list2: []
 			}
 		},
 		methods: {
 			handleClick(tab, event) {
-				console.log(tab, event)
+
 			}
 		},
 		created() {
@@ -163,101 +149,92 @@
 	#app>>> {
 		background-color: rgb(242, 242, 242);
 
-		.header-top {
-			height: 132px;
-			text-align: center;
-			line-height: 64px;
-			// background-image: url(../../../static/images/news/u10.png);
-
-
-			img {
-				width: 100%;
-			}
-
-			p {
-				color: #FFFFFF;
-				font-size: 20px;
-			}
-		}
-
 		.TabControl {
-			padding: 50px;
-
-			.el-tabs__nav {
-				margin-left: 650px;
+			width: 70vw;
+			margin: 0 auto;
+			@media screen and (max-width: 768px) {
+				width:90vw;
 			}
 
 			.classify1Top {
+				width: 100%;
 				display: flex;
-				justify-content: space-between;
+				flex-wrap: wrap;
+				margin: 0.2rem 0;
 
-				.classify1Left img {
-					width: 50vw;
+				.classify1Left {
+					min-height: 4.2rem;
+					img {
+						width: 100%;
+					}
 				}
 
 				.classify1Right {
-					margin-left: 60px;
-					padding: 30px;
-					background-color: #FFFFFF;
+					min-height: 4.2rem;
+					padding: 0.45rem 0.2rem;
+					background: #fff;
+					box-sizing: border-box;
 
 					.classify1Title {
 						color: rgb(124, 78, 35);
-						font-size: 22px;
-						margin: 50px 0;
+						font-size: 18px;
+						margin: 0.2rem 0;
 					}
 
 					.classify1Content {
 						font-size: 13px;
-						line-height: 30px;
+						line-height: 0.3rem;
 					}
 
 					.classify1Bot {
-						margin-top: 100px;
+						margin-top: 0.2rem;
 						color: #CCCCCC;
 
 						div {
-							float: left;
-							padding-right: 20px;
+							display: inline-block;
+							padding-right: 0.1rem;
 						}
 					}
 
 					.more p {
-						position: absolute;
-						right: 10px;
-						width: 60px;
-						height: 20px;
+						margin-left: 2rem;
+						width: 0.6rem;
+						height: 0.2rem;
 						text-align: center;
-						line-height: 20px;
-						border-radius: 10px;
+						line-height: 0.2rem;
+						border-radius: 0.1rem;
 						border: 1px solid rgb(124, 78, 35);
 						color: rgb(124, 78, 35);
 					}
 				}
 			}
 
-
 			.ListItem {
+				max-width: 1194px;
 				margin-top: 0.5rem;
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
+
+				div {
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+				}
 
 				li {
-					width: 350px;
-					float: left;
-					margin-left: 0.4rem;
-					margin-right: 0.8rem;
+					display: inline-block;
+					width: 3.8rem;
+					// height: 4.4rem;
+					min-width: 322px;
+					margin: 0.2rem 0;
 					background-color: #FFFFFF;
-					margin-bottom: 0.5rem;
 
 					img {
-						width: 350px;
-						height: 240px;
-
+						width: 100%;
+						height: 100%;
+						overflow: hidden;
 					}
 
 					.ItemBottom {
-						padding: 20px;
+						padding: 0.1rem;
 						line-height: 24px;
 
 						h3 {
@@ -269,12 +246,12 @@
 						}
 
 						.ItemMore p {
-							width: 60px;
-							height: 20px;
-							margin-top: 10px;
+							width: 0.6rem;
+							height: 0.2rem;
+							margin-top: 0.1rem;
 							text-align: center;
-							line-height: 20px;
-							border-radius: 10px;
+							line-height: 0.2rem;
+							border-radius: 0.1rem;
 							border: 1px solid rgb(124, 78, 35);
 							color: rgb(124, 78, 35);
 						}
@@ -285,6 +262,7 @@
 			.block {
 				text-align: center;
 				background-color: rgb(242, 242, 242);
+				margin-bottom: 0.2rem;
 			}
 		}
 	}
