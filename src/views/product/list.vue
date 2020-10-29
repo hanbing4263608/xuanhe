@@ -5,8 +5,8 @@
 			<div class="tabBox">
 				<el-tabs v-model="activeName" @tab-click="handleClick">
 					<el-tab-pane v-for="(item,index) in list" :label="item.label" :name="item.name" :key='index'>
-						<el-row class="every-list">
-							<el-col v-for="subItem,subIndex in item.productList" :key='subIndex'  :xs="24" :sm="12" :md="12" :lg="6" :xl="6">
+						<ul class="every-list">
+							<li v-for="subItem,subIndex in item.productList" :key='subIndex'>
 								<div class="giao">
 									<div class="top">
 										<img :src="subItem.img" alt="" />
@@ -20,16 +20,16 @@
 											<div class="text">
 												<p>空气净化器家用办公卧室负离子除甲醛雾霾二手<br />烟pm2.5除烟尘氧吧</p>
 											</div>
-											<div class="more">
+											<router-link to="/listwei" class="more">
 												MORE
 												<div></div>
-											</div>
+											</router-link tag="div">
 										</div>
 									</div>
 								</div>
 
-							</el-col>
-						</el-row>
+							</li>
+						</ul>
 					</el-tab-pane>
 				</el-tabs>
 			</div>
@@ -76,9 +76,6 @@
 
 <style scoped lang="scss">
 	#list>>>{
-		display:flex;
-		flex-direction: column;
-		align-items: center;
 		background-color: #E7E7E7;
 		.el-tabs__nav-scroll{
 			display:flex;
@@ -98,22 +95,30 @@
 			}
 		}
 		.every-list{
-			width:100%;
 			display:flex;
-			justify-content: center;
-			flex-wrap:wrap;
-			
+			justify-content: space-around;
+			@media screen and (max-width:768px) {
+				flex-direction: column;
+				align-items: center;
+			}
 			.giao {
+				
 				background-color: #fff;
 				width: 3rem;
 				overflow: hidden;
 				padding:.2rem 0;
-				height:4.4rem;
-				margin:.2rem .2rem;
+				margin:.2rem;
+				display:flex;
+				flex-direction: column;
+				align-items: center;
+				@media screen and (max-width:768px) {
+					width:80vw;
+				}
 				.top {
-					width: 3rem;
 					display:flex;
 					justify-content: center;
+					background:url(../../../static/images/news/u189.png);
+					background-size: cover;
 					img {
 						width: 60%;
 						margin:0 auto;
@@ -130,8 +135,8 @@
 							font-size: 0.13rem;
 							margin-top: 0.16rem;
 							margin-bottom: 0.35rem;
-							width: 0.7rem;
 							border-bottom: 1px solid #7c4e23;
+							display: inline-block;
 						}
 						.text p {
 							font-size: 0.16rem;
@@ -139,20 +144,18 @@
 						}
 						
 						.more {
-							display: inline-block;
-							width: 0.82rem;
-							height: 0.29rem;
+							display:flex;
+							justify-content: center;
+							align-items: center;
+							padding:.05rem .1rem;
 							border: 1px solid #7c4e23;
-							border-radius: 0.15rem;
+							border-radius: 0.3rem;
 							color: rgb(124, 78, 35);
 							text-align: center;
-							line-height: 0.29rem;
 							float: right;
 							margin-top: 0.17rem;
 							div {
-								display: inline-block;
-								width: 0px;
-								height: 0px;
+								margin-left:.1rem;
 								border-left: 12px solid #7c4e23;
 								border-top: 6px solid transparent;
 								border-bottom: 6px solid transparent;
@@ -161,6 +164,11 @@
 					}
 				}
 			}
+		}
+		.block{
+			margin:.2rem ;
+			display: flex;
+			justify-content: center;
 		}
 	}
 	

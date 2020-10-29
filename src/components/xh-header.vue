@@ -15,11 +15,10 @@
 				<router-link to="/contact"><img src="../../static/images/components/顶部_u18.png" alt=""></router-link>
 			</el-col>
 			<el-col :span="2" class="btn" >
-				<el-button icon="el-icon-more" @click="listclick"  ></el-button>
+				<div @click="listclick"  ><i class="el-icon-s-grid"></i></div>
 			</el-col>
 		</el-row>
 		<div class="bottom">
-			<img src="../../static/images/components/u1079.png" alt="">
 			<p class="text">{{navlist[curIndex].name}}</p>
 		</div>
 	</header>
@@ -83,39 +82,32 @@
 		}
 	}
 	#xhheader>>>{
-		width: 100vw;
-		
 		.top{
-			height:1rem;
+			width: 100vw;
+			height:.7rem;
 			display:flex;
 			justify-content: space-between;
 			align-items: center;
 			.btn{
-				height:.4rem;
-				width:.6rem;
-				padding:0;
 				display:none;
-				.el-button{
-					height:100%;
-					display:flex;
-					justify-content: center;
-					align-items: center;
-				}
+				font-size:.42rem;
+				color:#aaa;
+				align-items: flex-start;
 			}
 			.log{
 				padding:0 .5rem;
 				img{
-					height:.65rem;
-					width:1.32rem;
+					height:.42rem;
+					width:.82rem;
 				}	
 			}
 			.nav{
 				display:flex;
 				justify-content: center;
-				font-size:.24rem;
+				font-size:.18rem;
 				div{
 					padding:0 .34rem;
-					height:1rem;
+					height:.7rem;
 					display:flex;
 					align-items: center;
 					&:hover{
@@ -129,9 +121,11 @@
 				}
 			}
 			.way{
-				width: 1.6rem;
+				width: 1.2rem;
+				display:flex;
+				justify-content: space-between;
 				img{
-					height: .25rem;
+					height: .18rem;
 					margin:0 .1rem;
 					&:hover{
 						animation:jump .6s infinite;
@@ -141,16 +135,15 @@
 		}
 		.bottom{
 			position:relative;
-			img{
-				width: 100%;
-			}
+			height:.7rem;
+			background: url(../../static/images/components/u1079.png);
+			background-size:cover;
 			.text{
-				font-size: .24rem;
+				font-size: .2rem;
 				color:#fff;
 				width:2rem;
-				height:.8rem;
 				line-height: .4rem;
-				margin:-.4rem -1rem;
+				margin:-.2rem -1rem;
 				position:absolute;
 				top:50%;
 				left:50%;
@@ -160,45 +153,22 @@
 				align-items: center;
 			}
 		}
-		@media screen and (max-width: 1125px){
-			.top{
-				height:.8rem;
-				.log{
-					img{
-						height:.3rem;
-						width:.48rem;
-					}
-				}
-				.nav{
-					padding:0 .34rem;
-					font-size:.14rem;
-					div{
-						height:.8rem;
-					}
-				}
-				.way{
-					img{
-						height: .15rem;
-						
-					}
-				}
-			}
-		}
-		@media screen and (max-width: 1080px){
+		
+		@media screen and (max-width: 768px){
 			.top{
 				.btn{
-					display:block;
+					display:flex;
 				}
 				.nav{
+					width:100vw;
 					position: absolute;
 					display:flex;
 					flex-direction: column;
-					z-index:2;
+					z-index:10000;
 					background: rgb(227,226,240);
 					padding:0;
 					left:.0;
-					top:.8rem;
-					width:100vw;
+					top:.7rem;
 					display:none;
 					div{
 						padding:0;
@@ -206,9 +176,9 @@
 						justify-content: center;
 					}
 				}
-			}
-			.way{
-				display:none;
+				.way{
+					display:none;
+				}
 			}
 		}
 	}
