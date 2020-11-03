@@ -15,6 +15,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 Vue.use(VueAwesomeSwiper);
 import animated from 'animate.css'
 Vue.use(animated)
+import i18n from './i18n/index.js'
 
 import {
 	Button,
@@ -53,6 +54,7 @@ new Vue({
 	el: '#app',
 	router,
 	store,
+	i18n,
 	components: {
 		App
 	},
